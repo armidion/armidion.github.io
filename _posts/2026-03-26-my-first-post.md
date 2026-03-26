@@ -1,6 +1,6 @@
 ---
 title: "앞으로의 방향성과 다짐"
-date: 2026-03-26 13:00:00 +0900
+date: 2026-03-26 12:00:00 +0900
 categories: [Career, Roadmap]
 tags: [cloud, security, terraform]
 ---
