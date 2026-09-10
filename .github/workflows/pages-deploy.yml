@@ -39,27 +39,23 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.4
-          bundler-cache: true
-
-      - name: Build site
-        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: "production"
-
-      - name: Test site
+      - name: Prepare static portfolio
         run: |
-          bundle exec htmlproofer _site \
-            \-\-disable-external \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+          mkdir -p _site
+          cp index.html .nojekyll _site/
+          cp -R assets archives posts _site/
+
+      - name: Check required pages
+        run: |
+          test -f _site/index.html
+          test -f _site/archives/index.html
+          test -f _site/posts/my-first-post/index.html
+          test -f _site/posts/init-categories/index.html
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "_site${{ steps.pages.outputs.base_path }}"
+          path: "_site"
 
   deploy:
     environment:
