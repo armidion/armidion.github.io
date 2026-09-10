@@ -1,55 +1,49 @@
 ---
-name: DevFocus Dark
-colors:
-  primary: "#2665fd"
-  secondary: "#475569"
-  surface: "#0b1326"
-  on-surface: "#dae2fd"
-  error: "#ffb4ab"
-typography:
-  body-md:
-    fontFamily: Inter
-    fontSize: 16px
-    fontWeight: 400
-rounded:
-  md: 8px
+name: Linear Midnight
+theme: dark
+primary: "#e4f222"
+surface: "#08090a"
+on-surface: "#ffffff"
+font: Inter
 ---
 
-# DevFocus Dark Design System
+# Linear Midnight Design System
 
-## Overview
+## Direction
 
-A focused, minimal dark interface for a developer productivity tool. Clean lines, low visual noise, and high information density.
+A midnight precision-instrument interface: near-black surfaces, crisp white type, hairline geometry, compact controls, and one acid-lime primary action.
 
-## Colors
+## Core tokens
 
-- **Primary (`#2665fd`)**: CTAs, active states, and key interactive elements
-- **Secondary (`#475569`)**: Supporting UI, chips, borders, and secondary actions
-- **Surface (`#0b1326`)**: Page backgrounds
-- **On-surface (`#dae2fd`)**: Primary text on dark backgrounds
-- **Error (`#ffb4ab`)**: Validation errors and destructive actions
+- **Void (`#08090a`)** — page canvas
+- **Carbon (`#0f1011`)** — cards and navigation surfaces
+- **Obsidian (`#161718`)** — elevated panels
+- **Graphite (`#23252a`)** — hairline borders
+- **Fog (`#8a8f98`)** — secondary text
+- **Mist (`#d0d6e0`)** — supporting headings
+- **Paper (`#ffffff`)** — primary headings
+- **Acid Lime (`#e4f222`)** — the single primary action
 
 ## Typography
 
-- **Headlines**: Inter, semi-bold
-- **Body**: Inter, regular, 14–16px
-- **Labels**: Inter, medium, 12px, uppercase for section headers
+- Inter is used throughout; technical IDs use a system monospace fallback.
+- Body text is 16px / 400 / 1.5.
+- Display type uses tight `-0.022em` tracking and avoids weights above 590.
+- OpenType features: `cv01`, `ss03`, and slashed zero.
 
-## Components
+## Shape and spacing
 
-- **Buttons**: 8px rounded corners; primary actions use the brand-blue fill
-- **Inputs**: 1px border with a subtle surface-variant background
-- **Cards**: No elevation; use border and background contrast
+- 4px base spacing unit with an 8 / 12 / 24 / 96 rhythm.
+- Cards: 12px radius.
+- Buttons and inputs: 6px radius.
+- Badges: 4px radius.
+- Pills: fully rounded.
+- Page width: 1200px.
 
-## Do's and Don'ts
+## Rules
 
-- Do use the primary color sparingly, only for the most important action.
-- Don't mix rounded and sharp corners in the same view.
-- Do maintain at least a 4:1 contrast ratio for all text.
-
-## Portfolio implementation notes
-
-- Keep the interface dark by default and avoid decorative gradients that compete with the content.
-- Use one corner radius token (`8px`) for interactive controls and content surfaces.
-- Reserve blue for the main CTA, active navigation, focus states, and small status indicators.
-- Use secondary slate for borders, chips, and non-critical controls.
+- Use acid lime only for the highest-priority CTA and active navigation indicator.
+- Prefer 0.5px graphite borders and inset edges over outer shadows.
+- Keep body copy monochromatic.
+- Use functional interface artifacts instead of decorative illustrations.
+- Keep each viewport focused on one visual hierarchy.
