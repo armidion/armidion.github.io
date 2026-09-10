@@ -383,6 +383,45 @@ h1 span, h2 span { color: var(--muted); }
   font-size: 0.75rem;
 }
 
+.content-section { padding-block: clamp(5rem, 8vw, 7rem); }
+.activities-section { border-top: 0.5px solid var(--line); }
+.certifications-section { border-top: 0.5px solid var(--line); background: var(--bg-elevated); }
+
+.content-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
+  gap: 4rem;
+  align-items: end;
+  padding-block: 4rem;
+}
+
+.content-heading h2 {
+  margin: 0;
+  font-size: clamp(2.15rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+  font-weight: 510;
+}
+
+.content-heading > p { max-width: 430px; margin: 0; color: var(--muted); word-break: keep-all; }
+
+.activity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.activity-card { overflow: hidden; border: 0.5px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.activity-card-top { display: flex; justify-content: space-between; gap: 1rem; padding: 0.8rem 1rem; border-bottom: 0.5px solid var(--line); color: var(--muted); font: 400 0.68rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.sample-badge { width: fit-content; padding: 0.15rem 0.45rem; border-radius: var(--radius-badge); background: rgba(255, 255, 255, 0.05); color: var(--muted); font: 400 0.68rem/1.4 'Inter', sans-serif; white-space: nowrap; }
+.activity-card-body { min-height: 250px; padding: 1.5rem; display: flex; flex-direction: column; }
+.activity-period { margin-bottom: 2.5rem; color: var(--muted); font: 400 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.activity-card h3 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 510; letter-spacing: -0.022em; }
+.activity-role { margin: 0.3rem 0 1.5rem; color: var(--accent-strong); font-size: 0.86rem; }
+.activity-card-body > p:last-child { margin: auto 0 0; color: var(--muted); font-size: 0.9rem; word-break: keep-all; }
+
+.credential-list { display: grid; gap: 0.5rem; }
+.credential-item { display: grid; grid-template-columns: 52px minmax(0, 1fr) 150px auto; gap: 1.5rem; align-items: center; min-height: 96px; padding: 1rem 1.25rem; border: 0.5px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.credential-no { color: var(--muted); font: 400 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.credential-item h3 { margin: 0 0 0.2rem; font-size: 1rem; font-weight: 500; letter-spacing: -0.012em; }
+.credential-item p { margin: 0; color: var(--muted); font-size: 0.82rem; }
+.credential-date { color: var(--muted); font: 400 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+
 .intro-section, .journey-section {
   padding-block: clamp(5rem, 8vw, 7rem);
   display: grid;
@@ -805,7 +844,7 @@ h1 span, h2 span { color: var(--muted); }
   .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 6rem; }
   .signal-panel { max-width: 520px; }
   .intro-section, .journey-section, .contact-section { grid-template-columns: 1fr; gap: 3.5rem; }
-  .project-body, .work-heading, .timeline-heading, .note-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .project-body, .work-heading, .content-heading, .timeline-heading, .note-inner { grid-template-columns: 1fr; gap: 2rem; }
   .notes-hero { grid-template-columns: 1fr; gap: 1.5rem; }
   .note-card { grid-template-columns: 1fr auto; gap: 1rem; }
   .note-card .note-meta { grid-column: 1 / -1; }
@@ -825,6 +864,12 @@ h1 span, h2 span { color: var(--muted); }
   .signal-stats { grid-template-columns: 1fr; margin-top: 3rem; }
   .signal-stats div, .signal-stats div + div { padding: 0.75rem 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .command-row { grid-template-columns: 64px 1fr auto; gap: 0.5rem; }
+  .activity-grid { grid-template-columns: 1fr; }
+  .activity-card-body { min-height: 220px; }
+  .credential-item { grid-template-columns: 36px minmax(0, 1fr) auto; gap: 0.75rem; }
+  .credential-date { grid-column: 2; }
+  .credential-item .sample-badge { grid-column: 3; grid-row: 1; }
+  .content-heading { padding-block: 3.5rem; }
   .timeline-heading { padding-block: 3.5rem; }
   .timeline-track { min-width: 1020px; padding-inline: 0.75rem; }
   .timeline-detail { grid-template-columns: 1fr auto; gap: 1rem; }
