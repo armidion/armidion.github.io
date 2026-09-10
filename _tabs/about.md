@@ -1,8 +1,18 @@
 ---
-# the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# 안녕하세요, 김주용입니다.
+
+네트워크와 보안을 기반으로 클라우드를 이해하고, Terraform으로 재현 가능한 인프라를 만드는 엔지니어를 목표로 공부하고 있습니다.
+
+빠르게 많이 아는 것보다 직접 구성하고 실패한 이유까지 설명할 수 있는 실력을 중요하게 생각합니다. 이곳에는 실습 결과뿐 아니라 문제를 만난 과정과 해결의 근거를 함께 기록합니다.
+
+## 지금 집중하는 것
+
+- 네트워크와 보안 기초에서 클라우드 아키텍처로 확장하기
+- Terraform으로 반복 가능한 인프라 설계하기
+- OWASP 취약점의 원리와 계층별 방어 방법 이해하기
+
+진행 중인 코드와 활동은 [GitHub](https://github.com/armidion)에서 확인할 수 있습니다.
