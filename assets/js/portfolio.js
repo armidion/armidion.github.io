@@ -1,23 +1,6 @@
 (function () {
-  var root = document.documentElement;
-  var themeToggle = document.querySelector('[data-theme-toggle]');
   var menuToggle = document.querySelector('[data-menu-toggle]');
   var mobileMenu = document.querySelector('[data-mobile-menu]');
-  var storedTheme = localStorage.getItem('portfolio-theme');
-  var systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-  function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    themeToggle.setAttribute('aria-label', theme === 'dark' ? '밝은 테마로 전환' : '어두운 테마로 전환');
-  }
-
-  setTheme(storedTheme || (systemPrefersLight ? 'light' : 'dark'));
-
-  themeToggle.addEventListener('click', function () {
-    var nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    localStorage.setItem('portfolio-theme', nextTheme);
-  });
 
   menuToggle.addEventListener('click', function () {
     var isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
